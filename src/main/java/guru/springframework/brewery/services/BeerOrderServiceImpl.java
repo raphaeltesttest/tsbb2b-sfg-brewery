@@ -1,5 +1,25 @@
 package guru.springframework.brewery.services;
 
+import guru.springframework.brewery.domain.Beer;
+import guru.springframework.brewery.domain.BeerOrder;
+import guru.springframework.brewery.domain.Customer;
+import guru.springframework.brewery.domain.OrderStatusEnum;
+import guru.springframework.brewery.repositories.BeerOrderRepository;
+import guru.springframework.brewery.repositories.BeerRepository;
+import guru.springframework.brewery.repositories.CustomerRepository;
+import guru.springframework.brewery.web.mappers.BeerOrderMapper;
+import guru.springframework.brewery.web.model.BeerOrderDto;
+import guru.springframework.brewery.web.model.BeerOrderPagedList;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
 @Slf4j
 @Service
 public class BeerOrderServiceImpl implements BeerOrderService {

@@ -1,5 +1,20 @@
 package guru.springframework.brewery.services;
 
+import guru.springframework.brewery.domain.Beer;
+import guru.springframework.brewery.repositories.BeerRepository;
+import guru.springframework.brewery.web.mappers.BeerMapper;
+import guru.springframework.brewery.web.model.BeerDto;
+import guru.springframework.brewery.web.model.BeerPagedList;
+import guru.springframework.brewery.web.model.BeerStyleEnum;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import java.util.Optional;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
 @Service
 public class BeerServiceImpl implements BeerService {
 

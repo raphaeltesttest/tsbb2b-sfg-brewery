@@ -1,5 +1,11 @@
 package guru.springframework.brewery.services;
 
+import guru.springframework.brewery.web.model.BeerOrderDto;
+import guru.springframework.brewery.web.model.BeerOrderPagedList;
+import org.springframework.data.domain.Pageable;
+
+import java.util.UUID;
+
 public interface BeerOrderService {
     BeerOrderPagedList listOrders(UUID customerId, Pageable pageable);
 

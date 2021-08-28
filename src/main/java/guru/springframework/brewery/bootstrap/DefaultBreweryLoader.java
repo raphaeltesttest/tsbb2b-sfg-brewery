@@ -1,4 +1,14 @@
 package guru.springframework.brewery.bootstrap;
+import guru.springframework.brewery.domain.*;
+import guru.springframework.brewery.web.model.BeerStyleEnum;
+import guru.springframework.brewery.repositories.*;
+import guru.springframework.brewery.repositories.BreweryRepository;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 
 @Component
 public class DefaultBreweryLoader implements CommandLineRunner {

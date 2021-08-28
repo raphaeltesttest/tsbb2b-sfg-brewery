@@ -1,5 +1,12 @@
 package guru.springframework.brewery.web.mappers;
 
+import guru.springframework.brewery.domain.Beer;
+import guru.springframework.brewery.domain.BeerOrder;
+import guru.springframework.brewery.domain.BeerOrderLine;
+import guru.springframework.brewery.web.model.BeerOrderDto;
+import guru.springframework.brewery.web.model.BeerOrderLineDto;
+import org.mapstruct.Mapper;
+
 @Mapper(uses = DateMapper.class)
 public interface BeerOrderMapper {
 

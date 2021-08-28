@@ -1,5 +1,16 @@
 package guru.springframework.brewery.web.controllers;
 
+import guru.springframework.brewery.services.BeerService;
+import guru.springframework.brewery.web.model.BeerDto;
+import guru.springframework.brewery.web.model.BeerPagedList;
+import guru.springframework.brewery.web.model.BeerStyleEnum;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
+
 @RequestMapping("/api/v1/beer")
 @RestController
 public class BeerController {
@@ -38,16 +49,4 @@ public class BeerController {
         return new ResponseEntity<>(beerService.findBeerById(beerId), HttpStatus.OK);
     }
 }
-© 2021 GitHub, Inc.
-        Terms
-        Privacy
-        Security
-        Status
-        Docs
-        Contact GitHub
-        Pricing
-        API
-        Training
-        Blog
-        About
 

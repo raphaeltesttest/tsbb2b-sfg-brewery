@@ -1,5 +1,14 @@
 package guru.springframework.brewery.web.controllers;
 
+import guru.springframework.brewery.services.BeerOrderService;
+import guru.springframework.brewery.web.model.BeerOrderDto;
+import guru.springframework.brewery.web.model.BeerOrderPagedList;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
+
 @RequestMapping("/api/v1/customers/{customerId}/")
 @RestController
 public class BeerOrderController {

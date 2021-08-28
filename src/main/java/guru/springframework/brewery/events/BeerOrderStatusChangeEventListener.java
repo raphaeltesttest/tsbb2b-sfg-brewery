@@ -1,5 +1,14 @@
 package guru.springframework.brewery.events;
 
+import guru.springframework.brewery.web.mappers.DateMapper;
+import guru.springframework.brewery.web.model.OrderStatusUpdate;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
 @Component
 public class BeerOrderStatusChangeEventListener {
 
